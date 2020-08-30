@@ -72,6 +72,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   checkRequired([username, email, password, confirmPassword]);
+  checkEmail(email);
   checkLength(username, 3, 15);
   checkLength(password, 6, 25);
   checkPasswordsMatch(password, confirmPassword);
